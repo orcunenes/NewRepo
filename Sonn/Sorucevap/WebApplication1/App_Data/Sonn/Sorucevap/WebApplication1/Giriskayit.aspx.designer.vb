@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class sorular
+Partial Public Class Giriskayit
 
     '''<summary>
     '''form1 denetimi.
@@ -23,22 +23,31 @@ Partial Public Class sorular
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''DropDownList1 denetimi.
+    '''RadioButton1 denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents RadioButton1 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
-    '''TextBox1 denetimi.
+    '''giriskadi denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents giriskadi As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''girissifre denetimi.
+    '''</summary>
+    '''<remarks>
+    '''Otomatik üretilmiş alan.
+    '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+    '''</remarks>
+    Protected WithEvents girissifre As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Button2 denetimi.
@@ -50,22 +59,49 @@ Partial Public Class sorular
     Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''otomatikdoldur denetimi.
+    '''RadioButton3 denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents otomatikdoldur As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents RadioButton3 As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
-    '''hiddenlabel denetimi.
+    '''DropDownListokul denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents hiddenlabel As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents DropDownListokul As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''kayitograd denetimi.
+    '''</summary>
+    '''<remarks>
+    '''Otomatik üretilmiş alan.
+    '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+    '''</remarks>
+    Protected WithEvents kayitograd As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''kayitogrbrans denetimi.
+    '''</summary>
+    '''<remarks>
+    '''Otomatik üretilmiş alan.
+    '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+    '''</remarks>
+    Protected WithEvents kayitogrbrans As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''kayitogrsifre denetimi.
+    '''</summary>
+    '''<remarks>
+    '''Otomatik üretilmiş alan.
+    '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+    '''</remarks>
+    Protected WithEvents kayitogrsifre As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Button1 denetimi.

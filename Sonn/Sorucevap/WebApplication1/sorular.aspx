@@ -92,7 +92,7 @@
 
             </div>
             <div ><table id="container"></table></div>
-            <input type="button" value="soru ekle" onclick="soruekle()"/><asp:RadioButton ID="otomatikdoldur" runat="server" Text="Yanlış Cevapları Otomatik Doldur" />
+        <asp:Button ID="Button2" runat="server" Text="Button"/><asp:RadioButton ID="otomatikdoldur" runat="server" Text="Yanlış Cevapları Otomatik Doldur" />
 &nbsp;<br />
         <br />
         <asp:Label ID="hiddenlabel" runat="server" Text="hiddenlabel"></asp:Label>
