@@ -45,9 +45,12 @@ Public Class Giriskayit
 
         If ds.Tables("tablo1").Rows.Count > 0 Then
             MsgBox("Login Success!")
+            Response.Redirect("hosgeldiniz.aspx")
+
+
 
         Else
-            MsgBox("Incorrect combination of username and password!")
+            MsgBox("Kullanıcı Adı veya Şifreniz Hatalı!!")
         End If
 
     End Sub

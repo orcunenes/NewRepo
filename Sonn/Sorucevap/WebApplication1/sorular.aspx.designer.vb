@@ -50,6 +50,15 @@ Partial Public Class sorular
     Protected WithEvents otomatikdoldur As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
+    '''hiddenlabel denetimi.
+    '''</summary>
+    '''<remarks>
+    '''Otomatik üretilmiş alan.
+    '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+    '''</remarks>
+    Protected WithEvents hiddenlabel As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Button1 denetimi.
     '''</summary>
     '''<remarks>

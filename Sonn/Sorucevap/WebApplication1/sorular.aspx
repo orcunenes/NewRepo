@@ -21,7 +21,7 @@
             ;
             sorui=sorui + 1;
             */
-
+            document.getElementById('hiddenlabel').innerText = sorui;
             document.getElementById('container').innerHTML = document.getElementById('container').innerHTML
                 + '<tr><td>Soru'+sorui+'</td >'
                 +'<td><input type="text" value="soru1" name="soru'+sorui+'" /></td>'
@@ -30,6 +30,7 @@
                 + '<td><input type="text" value="cevap3" name="yanliscevap' + sorui + '" /></td>'
                 + '<td><input type="text" value="cevap4" name="yanliscevap' + sorui +'" /></td></tr >'
             sorui = sorui + 1;
+            
         }
     </script>
     <style>
@@ -92,7 +93,10 @@
             </div>
             <div ><table id="container"></table></div>
             <input type="button" value="soru ekle" onclick="soruekle()"/><asp:RadioButton ID="otomatikdoldur" runat="server" Text="Yanlış Cevapları Otomatik Doldur" />
-&nbsp;<asp:Button ID="Button1" runat="server" Text="Button" />
+&nbsp;<br />
+        <br />
+        <asp:Label ID="hiddenlabel" runat="server" Text="hiddenlabel"></asp:Label>
+        <asp:Button ID="Button1" runat="server" Text="Sorularımı Gönder" />
     </form>
 </body>
 </html>

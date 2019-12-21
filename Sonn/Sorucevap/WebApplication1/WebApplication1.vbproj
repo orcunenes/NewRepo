@@ -94,6 +94,7 @@
   <ItemGroup>
     <Content Include="App_Data\csharpsorucevap.accdb" />
     <Content Include="Giriskayit.aspx" />
+    <Content Include="hosgeldiniz.aspx" />
     <Content Include="sorular.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -103,6 +104,13 @@
     </Compile>
     <Compile Include="Giriskayit.aspx.vb">
       <DependentUpon>Giriskayit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="hosgeldiniz.aspx.designer.vb">
+      <DependentUpon>hosgeldiniz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hosgeldiniz.aspx.vb">
+      <DependentUpon>hosgeldiniz.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
