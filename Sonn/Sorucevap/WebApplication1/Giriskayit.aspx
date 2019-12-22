@@ -57,7 +57,7 @@
                         
                     </td>
                     <td>
-<asp:Button ID="Button2" runat="server" Text="Giriş yap" />
+                        <asp:Button ID="Button2" runat="server" Text="Giriş yap" />
                     </td>
                 </tr>
             </table>

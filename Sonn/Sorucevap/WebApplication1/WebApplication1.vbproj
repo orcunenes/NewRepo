@@ -97,6 +97,7 @@
     <Content Include="hosgeldiniz.aspx" />
     <Content Include="sorular.aspx" />
     <Content Include="Web.config" />
+    <Content Include="öncekisorularim.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Giriskayit.aspx.designer.vb">
@@ -137,6 +138,13 @@
     </Compile>
     <Compile Include="sorular.aspx.vb">
       <DependentUpon>sorular.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="öncekisorularim.aspx.designer.vb">
+      <DependentUpon>öncekisorularim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="öncekisorularim.aspx.vb">
+      <DependentUpon>öncekisorularim.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

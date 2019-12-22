@@ -42,9 +42,10 @@ Public Class Giriskayit
         adapter = New OleDbDataAdapter("select * from tablo1 where [ogretmenadi] = '" & giriskadi.Text &
                                        "' and [sifre] = '" & girissifre.Text & "'", conn)
         adapter.Fill(ds, "tablo1")
-
+        Session("ogretmen") = giriskadi.Text
         If ds.Tables("tablo1").Rows.Count > 0 Then
             MsgBox("Login Success!")
+
             Response.Redirect("hosgeldiniz.aspx")
 
 
