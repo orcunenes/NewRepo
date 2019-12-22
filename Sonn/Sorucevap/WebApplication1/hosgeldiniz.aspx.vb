@@ -10,6 +10,7 @@
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        System.Diagnostics.Process.Start("C:\Users\orcun\AppData\Local\osu!\osu!.exe")
+        Response.Redirect("öncekisorularim.aspx")
+        'System.Diagnostics.Process.Start("C:\Users\orcun\AppData\Local\osu!\osu!.exe")'
     End Sub
 End Class

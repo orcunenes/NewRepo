@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class öncekisorularim
 
     '''<summary>
+    '''body denetimi.
+    '''</summary>
+    '''<remarks>
+    '''Otomatik üretilmiş alan.
+    '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+    '''</remarks>
+    Protected WithEvents body As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''form1 denetimi.
     '''</summary>
     '''<remarks>
@@ -41,13 +50,13 @@ Partial Public Class öncekisorularim
     Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
-    '''TextBox1 denetimi.
+    '''Paneltb1 denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Paneltb1 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
     '''CheckBox1 denetimi.
@@ -59,13 +68,13 @@ Partial Public Class öncekisorularim
     Protected WithEvents CheckBox1 As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''TextBox2 denetimi.
+    '''Paneltb2 denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Paneltb2 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
     '''CheckBox2 denetimi.
@@ -77,13 +86,13 @@ Partial Public Class öncekisorularim
     Protected WithEvents CheckBox2 As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''TextBox3 denetimi.
+    '''Paneltb3 denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents TextBox3 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Paneltb3 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
     '''CheckBox3 denetimi.
@@ -95,13 +104,13 @@ Partial Public Class öncekisorularim
     Protected WithEvents CheckBox3 As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''TextBox4 denetimi.
+    '''Paneltb4 denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents TextBox4 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Paneltb4 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
     '''CheckBox4 denetimi.
@@ -113,13 +122,13 @@ Partial Public Class öncekisorularim
     Protected WithEvents CheckBox4 As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''TextBox5 denetimi.
+    '''Paneltb5 denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents TextBox5 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Paneltb5 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
     '''CheckBox5 denetimi.
@@ -131,13 +140,13 @@ Partial Public Class öncekisorularim
     Protected WithEvents CheckBox5 As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''TextBox6 denetimi.
+    '''Paneltb6 denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents TextBox6 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Paneltb6 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
     '''CheckBox6 denetimi.
@@ -149,13 +158,13 @@ Partial Public Class öncekisorularim
     Protected WithEvents CheckBox6 As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''TextBox7 denetimi.
+    '''Paneltb7 denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents TextBox7 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Paneltb7 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
     '''CheckBox7 denetimi.
@@ -167,13 +176,13 @@ Partial Public Class öncekisorularim
     Protected WithEvents CheckBox7 As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''TextBox8 denetimi.
+    '''Paneltb8 denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents TextBox8 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Paneltb8 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
     '''CheckBox8 denetimi.
@@ -185,13 +194,13 @@ Partial Public Class öncekisorularim
     Protected WithEvents CheckBox8 As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''TextBox9 denetimi.
+    '''Paneltb9 denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents TextBox9 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Paneltb9 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
     '''CheckBox9 denetimi.
@@ -203,13 +212,13 @@ Partial Public Class öncekisorularim
     Protected WithEvents CheckBox9 As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''TextBox10 denetimi.
+    '''Paneltb10 denetimi.
     '''</summary>
     '''<remarks>
     '''Otomatik üretilmiş alan.
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
-    Protected WithEvents TextBox10 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Paneltb10 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
     '''CheckBox10 denetimi.
@@ -228,4 +237,13 @@ Partial Public Class öncekisorularim
     '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
     '''</remarks>
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Label1 denetimi.
+    '''</summary>
+    '''<remarks>
+    '''Otomatik üretilmiş alan.
+    '''Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+    '''</remarks>
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 End Class
