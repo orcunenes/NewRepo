@@ -8,6 +8,9 @@
        .tablo,tr,td{
            width:150px;
        }
+        .auto-style1 {
+            height: 25px;
+        }
     </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
@@ -29,10 +32,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="auto-style1">
                             <asp:Panel ID="Paneltb1" runat="server"></asp:Panel>
                         </td>
-                        <td>
+                        <td class="auto-style1">
                             <asp:CheckBox ID="CheckBox1" runat="server" Text="Soruyu Ekle" />
                         </td>
                     </tr>
@@ -113,6 +116,7 @@
             </asp:Panel> 
            
             <asp:Button ID="Button1" runat="server" Text="Sonraki Sayfa" /><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            <asp:Button ID="Button2" runat="server" Text="Gönder" />
         </div>
         
     </form>
