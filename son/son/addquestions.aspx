@@ -175,7 +175,7 @@
              <%--   <input type="button" value="soru ekle" onclick="soruekle()"/><asp:RadioButton ID="otomatikdoldur" runat="server" Text="Yanlış Cevapları Otomatik Doldur" />
 &nbsp;<br />--%>
         <br />
-        <asp:Label ID="hiddenlabel" runat="server" Text="hiddenlabel"></asp:Label><asp:Label ID="hiddenogretmen" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="hiddenlabel" runat="server" Text="hiddenlabel" style="visibility:hidden"></asp:Label><asp:Label ID="hiddenogretmen" runat="server" Text="Label"  style="visibility:hidden"></asp:Label>
         <asp:Button ID="Button1" runat="server" Text="Sorularımı Gönder" OnClick="Button1_Click" />
     </form>
 </body>

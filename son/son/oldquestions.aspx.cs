@@ -50,7 +50,7 @@ namespace son
         protected void giris_Click(object sender, EventArgs e)
         {
             conn.Open();
-            String Sorularisec = ("select soru,dcevap,,ycevap1,ycevap2,ycevap3 from sorular where ogretmen = '" + Label1.Text + "' and konu = '" + DropDownList1.SelectedValue + "'");
+            String Sorularisec = ("select soru,dcevap,ycevap1,ycevap2,ycevap3 from sorular where ogretmen = '" + Label1.Text + "' and konu = '" + DropDownList1.SelectedValue + "'");
             OleDbCommand cmd = new OleDbCommand(Sorularisec, conn);
             OleDbDataReader Dreader = cmd.ExecuteReader();
             
@@ -60,15 +60,32 @@ namespace son
 
             while (Dreader.Read()) {
                 textbox1 = new TextBox();
-                textbox2 = new TextBox();
-                textbox3 = new TextBox();
-                textbox4 = new TextBox();
-                textbox5 = new TextBox();
+                
                 textbox1.ID = "textbox" + i.ToString();
-            
-                textbox1.Text = Dreader.GetValue(0).ToString();
+                textbox1.Text = Dreader[0].ToString();
                 this.Panel1.Controls.Add(textbox1);
 
+
+
+                /*
+                 * textbox2 = new TextBox();
+                textbox3 = new TextBox();
+                textbox4 = new TextBox();
+                textbox5 = new TextBox();  
+                textbox2.ID = "dogrucevap" + i.ToString();
+                textbox2.Text = Dreader[1].ToString();
+                textbox3.ID = "yanlis1" + i.ToString();
+                textbox3.Text = Dreader[2].ToString();
+                textbox4.ID = "yanlis2" + i.ToString();
+                textbox4.Text = Dreader[3].ToString();
+                textbox5.ID = "yanlis3" + i.ToString();
+                textbox5.Text = Dreader[4].ToString();
+
+                
+                this.Panel1.Controls.Add(textbox2);
+                this.Panel1.Controls.Add(textbox3);
+                this.Panel1.Controls.Add(textbox4);
+                this.Panel1.Controls.Add(textbox5); */
 
 
 
@@ -130,22 +147,21 @@ namespace son
         protected void Button2_Click(object sender, EventArgs e)
         {
             conn.Open();
-            sil = new OleDbCommand();
-            sil.Connection = conn;
-            sil.CommandText = "Delete * from tablo2 where soru= '" + siltext.Text + "'";
-            sil.ExecuteNonQuery();
+            textbox2.ID = "textbox0";
+            OleDbCommand sorusil = new OleDbCommand();
+            sorusil.Connection = conn;
+            string sil = "Delete * from sorular where soru=@sorue";
+            OleDbCommand sorusilme = new OleDbCommand(sil, conn);
+            sorusilme.Parameters.AddWithValue("sorue", textbox2.Text);
+            sorusilme.ExecuteNonQuery();
             conn.Close();
-        }
-        protected void Button3_Click(object sender, EventArgs e)
-        {
-            //yeni sayfaya geç ve Silme İşlemi yap?_?
         }
         protected void Button4_Click(object sender, EventArgs e)
         {
             conn.Open();
             sil = new OleDbCommand();
             sil.Connection = conn;
-            sil.CommandText = "Delete * from tablo2 where konu= '" + DropDownList1.SelectedValue+ "'";
+            sil.CommandText = "Delete * from sorular where konu= '" + DropDownList1.SelectedValue+ "'";
             sil.ExecuteNonQuery();
             conn.Close();
         }

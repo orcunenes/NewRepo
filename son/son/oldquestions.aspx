@@ -22,7 +22,7 @@
             konu seçiniz <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
             </asp:DropDownList>
             <asp:Button runat="server" ID="göster" Text="Göster" OnClick="giris_Click" />
-            <asp:Panel ID="Panel1" runat="server" Width="687px" Visible="true" Height="243px" style="float:left">
+            <asp:Panel ID="Panel1" runat="server" Width="255px" Visible="true" Height="243px" >
                 <table id="tablo">
                     <tr>
                         <td>
@@ -30,13 +30,10 @@
                         </td>
                         
                     </tr>
-                </table><asp:Button ID="Button5" runat="server" Text="Oyuna Başla" Width="171px" OnClick="basla_Click" />
+                </table>
             </asp:Panel> 
             <asp:Panel ID="Panel2" runat="server" Width="681px">
-            <table><tr><td> Silmek İstediğiniz Soru Numarası:</td><td>
-                <asp:TextBox ID="siltext" runat="server"></asp:TextBox></td>
-                <td> <asp:Button ID="Button2" runat="server" Text="Sil" OnClick="Button2_Click" Width="49px" /></td></tr>
-                <tr> <td>Soruları Güncelle</td><td><asp:Button ID="Button3" runat="server" Text="Güncelle" Width="125px" OnClick="Button3_Click" /></td></tr>
+            <table>
                 <tr><td>Konuyu Sil</td><td><asp:Button ID="Button4" runat="server" Text="Konuyu Sil" OnClick="Button4_Click" /></td></tr>
 
             </table>
@@ -45,7 +42,7 @@
             
             <br />
 
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Label" style="visibility:hidden"></asp:Label>
         </div>
         
     </form>
