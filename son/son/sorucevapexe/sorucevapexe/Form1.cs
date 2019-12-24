@@ -36,11 +36,6 @@ namespace sorucevapexe
             conn.ConnectionString = baglanti;
             InitializeComponent();
         }
-   
-        void konuyusec()
-        {
-            
-        }
         void sonrakisoru()
         {
             Random rastgelesayi = new Random();
@@ -77,6 +72,7 @@ namespace sorucevapexe
             if(soru[sorusayisi]=="son")
             {
                 MessageBox.Show("Tebrikler Oyun bitti \n Dogru Sayınız: "+dogru+"\n yanlış sayınız: "+yanlis);
+
                 conn.Open();
                 sil = new OleDbCommand();
                 sil.Connection = conn;
@@ -87,15 +83,14 @@ namespace sorucevapexe
             }
         }
 
-        
-
+        int x;
         private void Form1_Load(object sender, EventArgs e)
         {
 
             label3.Text = kesilmispath;
 
-
-
+            timer1.Interval = 100;
+            timer2.Interval = 100;
 
 
 
@@ -142,10 +137,14 @@ namespace sorucevapexe
             
             sonrakisoru();
             conn.Close();
+            timer1.Interval = 500;
         }
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if(button1.Text==dcevap[sorusayisi])
+            if (button1.Text == dcevap[sorusayisi])
             {
                 MessageBox.Show("bravo");
                 sorusayisi++;
@@ -154,11 +153,14 @@ namespace sorucevapexe
             }
             else
             {
-                MessageBox.Show("Yanlış!");
+                x = 0;
                 yanlis++;
+                timer1.Start();
             }
-
         }
+
+        
+
         private void button2_Click(object sender, EventArgs e)
         {
             if(button2.Text == dcevap[sorusayisi])
@@ -170,8 +172,9 @@ namespace sorucevapexe
             }
             else
             {
-                MessageBox.Show("Yanlış!");
+                x = 0;
                 yanlis++;
+                timer1.Start();
             }
         }
 
@@ -186,8 +189,9 @@ namespace sorucevapexe
             }
             else
             {
-                MessageBox.Show("Yanlış!");
+                x = 0;
                 yanlis++;
+                timer1.Start();
             }
         }
 
@@ -202,9 +206,41 @@ namespace sorucevapexe
             }
             else
             {
-                MessageBox.Show("Yanlış!");
+                x = 0;
                 yanlis++;
+                timer1.Start();
             }
         }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.BackColor = System.Drawing.Color.Red;
+            button1.Location = new Point(button1.Location.X + 5, 127);
+            
+            x = x + 1;
+            if (x == 2)
+            {
+                button1.Location = new Point(button1.Location.X - 10, 127);
+                this.BackColor = System.Drawing.Color.WhiteSmoke;
+                
+                timer1.Stop();
+            }
+        }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            this.BackColor = System.Drawing.Color.ForestGreen;
+            button1.Location = new Point(button1.Location.X + 5, 127);
+
+            x = x + 1;
+            if (x == 2)
+            {
+                button1.Location = new Point(button1.Location.X - 10, 127);
+                this.BackColor = System.Drawing.Color.WhiteSmoke;
+
+                timer1.Stop();
+            }
+        }
+
+
+
     }
 }

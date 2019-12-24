@@ -155,6 +155,7 @@ namespace son
             sorusilme.Parameters.AddWithValue("sorue", textbox2.Text);
             sorusilme.ExecuteNonQuery();
             conn.Close();
+
         }
         protected void Button4_Click(object sender, EventArgs e)
         {
