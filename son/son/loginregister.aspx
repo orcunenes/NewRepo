@@ -4,6 +4,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    
+
+    <script type="text/javascript">
+        function kayitol() {
+            document.getElementById("kayitol").style.visibility = "visible";
+            document.getElementById("girisyap").style.visibility = "hidden";
+        }
+        function girisyap() {
+            document.getElementById("girisyap").style.visibility = "visible";
+            document.getElementById("kayitol").style.visibility = "hidden";
+        }
+        </script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
@@ -35,10 +47,10 @@
 
 
         
-                        <asp:RadioButton ID="RadioButton3" runat="server" Text="Kayıt Ol" groupname="reglog" onchange="kayitol()"/>
+                        <asp:RadioButton ID="RadioButton3" runat="server" Text="Kayıt Ol" groupname="reglog" onchange="kayitol()" OnCheckedChanged="RadioButton3_CheckedChanged"/>
                     
         <div>
-            <table id="kayitol" >
+            <table id="kayitol" style="visibility:hidden" >
                 
                 <tr>
                     <td>Okul Adı:</td>

@@ -21,7 +21,7 @@ namespace son
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("addquestions");
+            Response.Redirect("addquestions.aspx");
         }
     }
 }

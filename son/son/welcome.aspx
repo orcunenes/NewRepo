@@ -12,7 +12,8 @@
         <div>
             <div>
             <h4>HOŞGELDİNİZ</h4>
-            <asp:Button ID="Button1" runat="server" Text="Önceki Sorularım" Height="50px" Width="130px" OnClick="Button1_Click" /><br />
+
+            <asp:Button ID="Button1" runat="server" Text="Eklenmiş Sorularım" Height="50px" Width="130px" OnClick="Button1_Click" /><br />
             <asp:Button ID="Button2" runat="server" Text="Yeni Sorular Oluştur" Height="50px" Width="130px" OnClick="Button2_Click" />
         </div>
         </div>

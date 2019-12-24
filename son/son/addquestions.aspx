@@ -57,7 +57,9 @@
     <form id="form1" runat="server">
         <div id="topdiv" >
             <table id="top" >
-                <tr>
+                <tr><td>
+                    <asp:Button ID="Button2" runat="server" Text="geri" OnClick="Button2_Click" Width="92px" />
+                    </td>
                     <td>Ders Adı:</td>
                     <td><asp:DropDownList ID="DropDownListders" runat="server">
                             <asp:ListItem>Matematik</asp:ListItem>

@@ -12,8 +12,6 @@ namespace son
     public partial class giriskayitt : System.Web.UI.Page
     {
         OleDbConnection conn = new OleDbConnection();
-        DataSet ds;
-        OleDbDataAdapter adapter;
         OleDbCommand cmd;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,6 +23,10 @@ namespace son
 
         protected void girisyap_Click(object sender, EventArgs e)
         {
+            if (giriskadi.Text == "" || girissifre.Text == "")
+            {
+                Response.Write("<script>alert('Giriş Yapmak için boş bilgi girmeyiniz.')</script>");
+            }
             string komut = "select* from tablo1 where[ogretmenadi] = '" + giriskadi.Text + "' and[sifre] = '" + girissifre.Text + "'";
             OleDbCommand cmd = new OleDbCommand(komut, conn);
             conn.Open();
@@ -34,14 +36,15 @@ namespace son
             {
                 if (dr.HasRows == true)
                 {
-                    Response.Write("Giriş Başarılı");
+                    Session["ogretmenadi"] = giriskadi.Text;
+                    Response.Write("<script>alert('Giriş Başarılı Yönlendiriliyorsunuz.')</script>");
                     Response.Redirect("welcome.aspx");
                 }
             }
             if (dr.HasRows == false)
             {
 
-                Response.Write("kullanıcı Adı veya Şifre yanlış.");
+                Response.Write("<script>alert('Kullanıcı Adı veya Şifre Yanlış')</script>");
             }
             conn.Close();
         }
@@ -49,12 +52,26 @@ namespace son
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
+            if (kayitograd.Text == "" || kayitogrbrans.Text == "" || kayitogrsifre.Text == "")
+            {
+                Response.Write("<script>alert('Herhangi bir bilgi boş olamaz.')</script>");
+            }
+            else { 
+
             cmd = new OleDbCommand();
             conn.Open();
             cmd.Connection = conn;
             cmd.CommandText = "insert into tablo1 (ogretmenadi,okuladi,brans,sifre) values ('" + kayitograd.Text + "','" + DropDownListokul.SelectedValue + "','" + kayitogrbrans.Text + "','" + kayitogrsifre.Text + "')";
             cmd.ExecuteNonQuery();
             conn.Close();
+            RadioButton1.Checked = true;
+            Response.Write("<script>alert('Kayıt Başarılı')</script>");
+            }
+        }
+
+        protected void RadioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

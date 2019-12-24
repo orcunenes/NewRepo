@@ -15,10 +15,14 @@
 <body runat="server" id="body">
     <form id="form1" runat="server">
         <div>
+            <h4>
+                <asp:Button ID="Button1" runat="server" Text="geri" OnClick="Button1_Click" /></h4>
+        </div>
+        <div style="height: 112px">
             konu seçiniz <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
             </asp:DropDownList>
-            <asp:Button runat="server" Text="Göster" OnClick="giris_Click" />
-            <asp:Panel ID="Panel1" runat="server" Width="205px" Visible="true" Height="243px">
+            <asp:Button runat="server" ID="göster" Text="Göster" OnClick="giris_Click" />
+            <asp:Panel ID="Panel1" runat="server" Width="687px" Visible="true" Height="243px" style="float:left">
                 <table id="tablo">
                     <tr>
                         <td>
@@ -26,11 +30,22 @@
                         </td>
                         
                     </tr>
-                </table>
+                </table><asp:Button ID="Button5" runat="server" Text="Oyuna Başla" Width="171px" OnClick="basla_Click" />
             </asp:Panel> 
+            <asp:Panel ID="Panel2" runat="server" Width="681px">
+            <table><tr><td> Silmek İstediğiniz Soru Numarası:</td><td>
+                <asp:TextBox ID="siltext" runat="server"></asp:TextBox></td>
+                <td> <asp:Button ID="Button2" runat="server" Text="Sil" OnClick="Button2_Click" Width="49px" /></td></tr>
+                <tr> <td>Soruları Güncelle</td><td><asp:Button ID="Button3" runat="server" Text="Güncelle" Width="125px" OnClick="Button3_Click" /></td></tr>
+                <tr><td>Konuyu Sil</td><td><asp:Button ID="Button4" runat="server" Text="Konuyu Sil" OnClick="Button4_Click" /></td></tr>
+
+            </table>
+            </asp:Panel>
            
+            
+            <br />
+
             <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-            <asp:Button ID="Button2" runat="server" Text="Gönder" OnClick="Button2_Click" />
         </div>
         
     </form>
