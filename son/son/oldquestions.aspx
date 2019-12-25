@@ -34,6 +34,9 @@
             </asp:Panel> 
             <asp:Panel ID="Panel2" runat="server" Width="681px">
             <table>
+                <tr><td>
+                    <asp:Button ID="girisyap" runat="server" Text="Oyuna Başla" onclick="basla_Click" /></td>
+                </tr>
                 <tr><td>Konuyu Sil</td><td><asp:Button ID="Button4" runat="server" Text="Konuyu Sil" OnClick="Button4_Click" /></td></tr>
 
             </table>

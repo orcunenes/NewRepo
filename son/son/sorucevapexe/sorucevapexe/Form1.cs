@@ -71,9 +71,16 @@ namespace sorucevapexe
             }
             if(soru[sorusayisi]=="son")
             {
-                MessageBox.Show("Tebrikler Oyun bitti \n Dogru Sayınız: "+dogru+"\n yanlış sayınız: "+yanlis);
-
+                MessageBox.Show("Tebrikler Oyun bitti ");
+                panel1.Visible = true;
+                panel2.Visible = true;
+                label4.Text = "tebrikler doğru sayınız: " + dogru;
+                label5.Text = "yanlış sayınız: " + yanlis;
                 conn.Open();
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+                button4.Visible = false;
                 sil = new OleDbCommand();
                 sil.Connection = conn;
                 sil.CommandText = "Delete * from tablo2";
@@ -91,8 +98,12 @@ namespace sorucevapexe
 
             timer1.Interval = 100;
             timer2.Interval = 100;
-
-
+            timer3.Interval = 100;
+            timer3.Interval = 100;
+            timer4.Interval = 100;
+            timer5.Interval = 100;
+            panel1.Visible = false;
+            panel2.Visible = false;
 
 
 
@@ -150,6 +161,7 @@ namespace sorucevapexe
                 sorusayisi++;
                 sonrakisoru();
                 dogru++;
+                timer2.Start();
             }
             else
             {
@@ -169,14 +181,17 @@ namespace sorucevapexe
                 sorusayisi++;
                 sonrakisoru();
                 dogru++;
+                timer2.Start();
             }
             else
             {
                 x = 0;
                 yanlis++;
-                timer1.Start();
+                timer3.Start();
             }
         }
+
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -186,12 +201,13 @@ namespace sorucevapexe
                 sorusayisi++;
                 sonrakisoru();
                 dogru++;
+                timer2.Start();
             }
             else
             {
                 x = 0;
                 yanlis++;
-                timer1.Start();
+                timer4.Start();
             }
         }
 
@@ -203,12 +219,13 @@ namespace sorucevapexe
                 sorusayisi++;
                 sonrakisoru();
                 dogru++;
+                timer2.Start();
             }
             else
             {
                 x = 0;
                 yanlis++;
-                timer1.Start();
+                timer5.Start();
             }
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -228,18 +245,62 @@ namespace sorucevapexe
         private void timer2_Tick(object sender, EventArgs e)
         {
             this.BackColor = System.Drawing.Color.ForestGreen;
-            button1.Location = new Point(button1.Location.X + 5, 127);
+            
 
             x = x + 1;
             if (x == 2)
             {
-                button1.Location = new Point(button1.Location.X - 10, 127);
+                
+                this.BackColor = System.Drawing.Color.WhiteSmoke;
+
+                timer1.Stop();
+            }
+        }
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            this.BackColor = System.Drawing.Color.Red;
+            button2.Location = new Point(button1.Location.X + 5, 127);
+
+
+            x = x + 1;
+            if (x == 2)
+            {
+                button2.Location = new Point(button1.Location.X - 10, 127);
                 this.BackColor = System.Drawing.Color.WhiteSmoke;
 
                 timer1.Stop();
             }
         }
 
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            this.BackColor = System.Drawing.Color.Red;
+            button3.Location = new Point(button1.Location.X + 5, 127);
+
+            x = x + 1;
+            if (x == 2)
+            {
+                button3.Location = new Point(button1.Location.X - 10, 127);
+                this.BackColor = System.Drawing.Color.WhiteSmoke;
+
+                timer1.Stop();
+            }
+        }
+
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            this.BackColor = System.Drawing.Color.Red;
+            button4.Location = new Point(button1.Location.X + 5, 127);
+
+            x = x + 1;
+            if (x == 2)
+            {
+                button4.Location = new Point(button1.Location.X - 10, 127);
+                this.BackColor = System.Drawing.Color.WhiteSmoke;
+
+                timer1.Stop();
+            }
+        }
 
 
     }

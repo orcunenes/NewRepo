@@ -28,6 +28,7 @@ namespace son
             {
                 Response.Write("<script>alert('konu giriniz')</script>");
             }
+            else { 
 
             string ara = "select konu from sorular where [konu] = '" + konuadi.Text + "'";
             OleDbCommand konuara = new OleDbCommand(ara, conn);
@@ -43,7 +44,7 @@ namespace son
 
                 }
             }
-            if(konuvar==true)
+            if (konuvar == true)
             {
                 Response.Write("<script>alert('Konu adı daha önce kullanılmıştır.')</script>");
                 konuvar = false;
@@ -57,7 +58,7 @@ namespace son
 
 
 
-                
+
                 if (soru1.Text.Length > 0 && dogru1.Text.Length > 0 && yanliscevapbir1.Text.Length > 0 && yanliscevapiki1.Text.Length > 0 && yanliscevapuc1.Text.Length > 0)
                 {
                     String soruekle1 = "INSERT INTO sorular(ogretmen,ders,konu,soru,dcevap,ycevap1,ycevap2,ycevap3) VALUES (@ogretmenad,@dersadi,@konuadi,@soru,@dogrucevap,@yanlis1,@yanlis2,@yanlis3)";
@@ -213,6 +214,7 @@ namespace son
 
                 Response.Write("<script> alert=('sorularınız eklenmiştir')</script>");
                 Response.Redirect("welcome.aspx");
+                }
             }
         }
 

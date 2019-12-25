@@ -23,7 +23,7 @@ namespace son
         TextBox textbox5 = new TextBox();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Panel2.Visible = false;
             
             Label1.Text = Session["ogretmenadi"].ToString();
 
@@ -63,6 +63,7 @@ namespace son
                 
                 textbox1.ID = "textbox" + i.ToString();
                 textbox1.Text = Dreader[0].ToString();
+                textbox1.ReadOnly = true;
                 this.Panel1.Controls.Add(textbox1);
 
 
@@ -103,8 +104,8 @@ namespace son
 
 
 
-            Button5.Visible = true;
-            Panel2.Visible = true;
+            
+            Panel2.Visible=true;
             conn.Close();
             
         }
